@@ -1,11 +1,14 @@
 body {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 
 p {
     display: block;
     margin: 2em auto;
+    color: white;
 }
 
 .u-center {
@@ -27,6 +30,7 @@ p {
     padding: 20px;
     -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
     width: 29rem;
+    background-color: black;
 }
 
 .input {
@@ -40,6 +44,7 @@ p {
     padding-top: 10px;
     text-align: right;
     transition: all .2s ease-in-out;
+    color: white;
 }
 
 .input:hover {
@@ -102,7 +107,7 @@ p {
 
 .equal {
     display: inline-block;
-    border: 1px solid #3079ED;
+    
     border-radius: 1px;
     width: 17%;
     text-align: center;
@@ -111,15 +116,15 @@ p {
     vertical-align: top;
     cursor: pointer;
     color: #FFF;
-    background-color: #4d90fe;
+    background-color: #833ab4;
     transition: all .2s ease-in-out;
 }
 
 .equal:hover {
-    background-color: #307CF9;
+    background-color: #642d8a;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-color: #1857BB;
+    
 }
 
 .equal:active {
