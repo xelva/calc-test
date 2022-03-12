@@ -50,6 +50,6 @@
         Originally forked from: <a href="https://codepen.io/lalwanivikas/pen/eZxjqo">https://codepen.io/lalwanivikas/pen/eZxjqo</a>
     </p>
 </div>
-<script src="js/script-backup.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

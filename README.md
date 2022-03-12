@@ -23,3 +23,5 @@ Create a Calculator using HTML/CSS/JS
    - Get an array of the operators
    - Perform each math operation (**NOTE:** We'll use 4 `while` loops)
 1. Add click handler clearing the input on press of clear
+
+
