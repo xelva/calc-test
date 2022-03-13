@@ -31,11 +31,12 @@ p {
     -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
     width: 29rem;
     background-color: black;
+    border-radius: 8px;
 }
 
 .input {
     border: 1px solid #ddd;
-    border-radius: 1px;
+    border-radius: 2px;
     font-size: 2.5rem;
     height: 60px;
     margin-right: 6px;
@@ -56,7 +57,7 @@ p {
 .operators div {
     display: inline-block;
     border: 1px solid #bbb;
-    border-radius: 1px;
+    border-radius: 3px;
     width: 80px;
     text-align: center;
     padding: 10px;
@@ -84,7 +85,7 @@ p {
 .numbers div {
     display: inline-block;
     border: 1px solid #ddd;
-    border-radius: 1px;
+    border-radius: 3px;
     width: 80px;
     text-align: center;
     padding: 10px;
@@ -108,7 +109,7 @@ p {
 .equal {
     display: inline-block;
     
-    border-radius: 1px;
+    border-radius: 3px;
     width: 17%;
     text-align: center;
     padding: 127px 10px;
