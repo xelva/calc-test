@@ -42,9 +42,7 @@ for (let i = 0; i<numbers.length; i++) {
             }
             //if the user is not entering a decimal, add the number to input
             if(e.target.innerHTML != ".") {
-                //but if you previously were displaying a result, clear the input first
-                
-                //then add your number
+    
                 input.innerHTML += e.target.innerHTML; 
             }
             //else if the user clicks a decimal for the first time (we know this bc flag is negative), add decimal and set the flag to positive
@@ -65,8 +63,6 @@ for (let i = 0; i<operations.length; i++) {
             operatorFlag = true;
             //add the numbers that are currently in the display to an array before clearing them
             numArray.push(input.innerHTML);
-            //show that it's working in console
-            console.log(numArray);
             //clear the input display
             input.innerHTML = '';
             //add the operator
@@ -86,55 +82,48 @@ calcResult.addEventListener('click', function(){
     operatorFlag = true;
     //add the numbers that are currently in the display to an array before clearing them
     numArray.push(input.innerHTML);
-    //show that it's working in console
-    //console.log(numArray);
-    //clear the input display
+    //clear what's currently in the display
     input.innerHTML = '';
-    console.log(numArray);
+
+    //loop through your array of numbers
     for (let i = 0; i < numArray.length; i++) {
 
-            console.log(numArray[i]);
-
+            //store the first one in a new array that will tally operations as you go
             if (resultArray.length === 0){
-                resultArray.push(numArray[i]);
-                console.log('holdnum for the first time');
-               
+                resultArray.push(numArray[i]);               
             }
+            //for all following numbers...
             else {
                 if (opsArray[0] === '+') {
+                    //after you've used your operator, remove it from the front of your op array
                     opsArray.shift();
+                    //then perform your operation on the first (and only) item in tally array and the number you're iterating through
                     holdRes = Number(resultArray[0]) + Number(numArray[i]);
+                    //and store the results as the tally in your tally array
                     resultArray[0] = holdRes;
-                    console.log('done with this round');
-                    
-                    
                 }
                 else if (opsArray[0] === '-') {
                     opsArray.shift();
                     holdRes = Number(resultArray[0]) - Number(numArray[i]);
                     resultArray[0] = holdRes;
-                    console.log('done with this round');
-                    
                     
                 }
                 else if (opsArray[0] === '*') {
                     opsArray.shift();
                     holdRes = Number(resultArray[0]) * Number(numArray[i]);
                     resultArray[0] = holdRes;
-                    console.log('done with this round');
-                   
-                    
                 }
                 else {
                     opsArray.shift();
                     holdRes = Number(resultArray[0]) / Number(numArray[i]);
                     resultArray[0] = holdRes;
-                    console.log('done with this round');
-                    
+ 
                 }
             }
     }
+    //log results to the display
     input.innerHTML = resultArray;
+    //and reset all your flags
     decimalFlag = false;
     operatorFlag = false;
     opsArray = [];
@@ -143,15 +132,6 @@ calcResult.addEventListener('click', function(){
     equalFlag = false;
 
 });
-
-//when the equals button is clicked
-    //pop the last remaining number in array
-    //convert string to numbers and stor ein new array (map)
-    //loop through each array item of numbers 
-    //get first item in ops array, perform the first action in the operator array
-        //maybe something like if statement with four operator options 
-    //use something like shift splice to remove the first item after the loop
-        //maybe opsArray.splice(0,1) or myOps.shift()
 
 
 //what happens when an operator is clicked and then a number
